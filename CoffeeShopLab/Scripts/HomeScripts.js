@@ -107,11 +107,11 @@ function ValidateSSN() {
 
     if (ssnPattern.test(document.getElementById("SSN").value)) {
         document.getElementById("SSNValid").style.display = "block";
-        document.getElementById("SSNInvalid").innerHTML = "none";
+        document.getElementById("SSNInvalid").style.display = "none";
     }
     else {
         document.getElementById("SSNValid").style.display = "none";
-        document.getElementById("SSNInvalid").innerHTML = "block";
+        document.getElementById("SSNInvalid").style.display = "block";
     }
 }
 
