@@ -1,0 +1,61 @@
+﻿@model CoffeeShopLab.Models.RegisterUser
+
+@{
+    ViewBag.Title = "Coffee Shop Registration Page";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Styles/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="~/Scripts/HomeScripts.js"></script>
+    <title>Registration</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("AddUser", "CoffeeShop", FormMethod.Post))
+        {
+
+            @Html.LabelFor(x => x.FirstName)
+            @Html.EditorFor(x => x.FirstName)
+            <p class="valid" id="FirstNameValid">Valid</p>
+            <p class="invalid" id="FirstNameInvalid">Invalid</p>
+            @Html.LabelFor(x => x.LastName)
+            @Html.EditorFor(x => x.LastName)
+            <p class="valid" id="LastNameValid">Valid</p>
+            <p class="invalid" id="LastNameInvalid">Invalid</p>
+            @Html.LabelFor(x => x.Email)
+            @Html.EditorFor(x => x.Email)
+            <p class="valid" id="EmailValid">Valid</p>
+            <p class="invalid" id="EmailInvalid">Invalid</p>
+            @Html.LabelFor(x => x.PhoneNumber)
+            @Html.EditorFor(x => x.PhoneNumber)
+            <p class="valid" id="PhoneNumberValid">Valid</p>
+            <p class="invalid" id="PhoneNumberInvalid">Invalid</p>
+            @Html.LabelFor(x => x.PassWord)
+            @Html.EditorFor(x => x.PassWord)
+            <p class="valid" id="PassWordValid">Valid</p>
+            <p class="invalid" id="PassWordInvalid">Invalid</p>
+            @Html.LabelFor(x => x.Date)
+            @Html.EditorFor(x => x.Date)
+            <p class="valid" id="DateValid">Valid</p>
+            <p class="invalid" id="DateInvalid">Invalid</p>
+            @Html.LabelFor(x => x.Age)
+            @Html.EditorFor(x => x.Age, new { htmlAttributes = new { onchange = "ValidateAge()" } })
+            <p class="valid" id="AgeValid">Valid</p>
+            <p class="invalid" id="AgeInvalid">Invalid</p>
+            @Html.LabelFor(x => x.SSN)
+            @Html.EditorFor(x => x.SSN)
+            <p class="valid" id="SSNValid">Valid</p>
+            <p class="invalid" id="SSNInvalid">Invalid</p>
+            <button type="submit">Register Here</button>
+        }
+    </div>
+</body>
+</html>
