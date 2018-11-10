@@ -51,7 +51,7 @@
             <p class="valid" id="AgeValid">Valid</p>
             <p class="invalid" id="AgeInvalid">Invalid</p>
             @Html.LabelFor(x => x.SSN)
-            @Html.EditorFor(x => x.SSN)
+            @Html.EditorFor(x => x.SSN, new { htmlAttributes = new { onchange = "ValidateSSN()" } })
             <p class="valid" id="SSNValid">Valid</p>
             <p class="invalid" id="SSNInvalid">Invalid</p>
             <button type="submit">Register Here</button>
