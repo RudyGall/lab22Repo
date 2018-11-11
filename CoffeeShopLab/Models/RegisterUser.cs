@@ -7,6 +7,28 @@ namespace CoffeeShopLab.Models
 {
     public class RegisterUser
     {
+        public RegisterUser()
+        {
+            FirstName = "";
+            LastName = "";
+            Email = "";
+            PhoneNumber = "";
+            PassWord = "";
+            Date = "";
+            Age = "";
+            SSN = "";
+        }
+        public RegisterUser(string firstName, string lastName, string email, string phoneNumber, string password, string date, string age, string ssn)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+            PhoneNumber = phoneNumber;
+            PassWord = password;
+            Date = date;
+            Age = age;
+            SSN = ssn;
+        }
         [Required]
         [RegularExpression("^[a-zA-Z]{2,}$")]
         [Display(Name ="First Name")]
@@ -25,13 +47,13 @@ namespace CoffeeShopLab.Models
 
         [Required]
         [RegularExpression(@"^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$")]
-        [Display(Name = "Todays Date")]
-        public DateTime Date { get; set; }
+        [Display(Name = "Date")]
+        public string Date { get; set; }
 
         [Required]
         [RegularExpression(@"^[1-9]$|^[1-9][0-9]$|^(100)$")]
         [Display(Name = "Age")]
-        public int Age { get; set; }
+        public string Age { get; set; }
 
         [Required]
         [RegularExpression(@"^\d{3}-?\d{2}-?\d{4}$")]
@@ -48,9 +70,5 @@ namespace CoffeeShopLab.Models
         [RegularExpression(@"^[a-zA-Z]\w{3,14}$")]
         [Display(Name = "PassWord ")]
         public string PassWord { get; set; }
-
-
-
-
     }
 }

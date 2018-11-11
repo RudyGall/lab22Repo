@@ -18,22 +18,20 @@ namespace CoffeeShopLab.Controllers
         public ActionResult Register()
         {
 
-
-
-            return View(); 
+            return View();
         }
-
-
-
         [HttpPost]
-        public ActionResult AddUser(RegisterUser model)
+        public ActionResult AddUser(RegisterUser newUser)
         {
-
-
-
-            return View(model); 
-
-
+            if (ModelState.IsValid)
+            {
+                @ViewBag.ConfMessage = "Welcome " + newUser.FirstName;
+                return View();
+            }
+            else
+            {
+                return View("Error");
+            }
         }
     }
 }
