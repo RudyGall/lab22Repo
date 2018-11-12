@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CoffeeShopLab.Models;
+using System.Web.Mvc.Html;
 
 namespace CoffeeShopLab.Controllers
 {
@@ -25,7 +26,7 @@ namespace CoffeeShopLab.Controllers
         {
             if (ModelState.IsValid)
             {
-                @ViewBag.ConfMessage = "Welcome " + newUser.FirstName;
+                ViewBag.ConfMessage = "Welcome " + newUser.FirstName;
                 return View();
             }
             else

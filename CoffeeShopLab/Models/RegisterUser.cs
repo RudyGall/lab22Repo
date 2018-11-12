@@ -70,5 +70,9 @@ namespace CoffeeShopLab.Models
         [RegularExpression(@"^[a-zA-Z]\w{3,14}$")]
         [Display(Name = "PassWord ")]
         public string PassWord { get; set; }
+
+        [Required]
+        [Display(Name = "Please verify the information is correct")]
+        public string Verify { get; set; }
     }
 }

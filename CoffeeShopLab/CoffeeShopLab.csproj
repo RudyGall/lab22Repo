@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Images\coffeecupimg.JPG" />
     <Content Include="Scripts\HomeScripts.js" />
     <Content Include="Styles\styles.css" />
     <Content Include="Web.config" />

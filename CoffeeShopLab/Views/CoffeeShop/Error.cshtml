@@ -1,20 +1,18 @@
 ﻿
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Styles/styles.css" />
     <title>Error</title>
+
 </head>
 <body>
     <hgroup>
         <h1>Error.</h1>
         <h2>An error occurred while processing your request.</h2>
-
         @Html.ValidationSummary()
     </hgroup>
+    <p>Click <a href="Index"> Here </a> to return home</p>
 </body>
 </html>

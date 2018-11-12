@@ -3,59 +3,65 @@
 @{
     ViewBag.Title = "Coffee Shop Registration Page";
 }
-@{
-    Layout = null;
-}
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="~/Styles/styles.css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="~/Scripts/HomeScripts.js"></script>
     <title>Registration</title>
 </head>
-<body>
-    <div>
-        @using (Html.BeginForm("AddUser", "CoffeeShop", FormMethod.Post))
-        {
+<body class="container-fluid">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            @using (Html.BeginForm("AddUser", "CoffeeShop", FormMethod.Post))
+            {
 
-            @Html.LabelFor(x => x.FirstName)
-            @Html.EditorFor(x => x.FirstName)
-            <p class="valid" id="FirstNameValid">Valid</p>
-            <p class="invalid" id="FirstNameInvalid">Invalid</p>
-            @Html.LabelFor(x => x.LastName)
-            @Html.EditorFor(x => x.LastName)
-            <p class="valid" id="LastNameValid">Valid</p>
-            <p class="invalid" id="LastNameInvalid">Invalid</p>
-            @Html.LabelFor(x => x.Email)
-            @Html.EditorFor(x => x.Email)
-            <p class="valid" id="EmailValid">Valid</p>
-            <p class="invalid" id="EmailInvalid">Invalid</p>
-            @Html.LabelFor(x => x.PhoneNumber)
-            @Html.EditorFor(x => x.PhoneNumber)
-            <p class="valid" id="PhoneNumberValid">Valid</p>
-            <p class="invalid" id="PhoneNumberInvalid">Invalid</p>
-            @Html.LabelFor(x => x.PassWord)
-            @Html.EditorFor(x => x.PassWord)
-            <p class="valid" id="PassWordValid">Valid</p>
-            <p class="invalid" id="PassWordInvalid">Invalid</p>
-            @Html.LabelFor(x => x.Date)
-            @Html.EditorFor(x => x.Date)
-            <p class="valid" id="DateValid">Valid</p>
-            <p class="invalid" id="DateInvalid">Invalid</p>
-            @Html.LabelFor(x => x.Age)
-            @Html.EditorFor(x => x.Age, new { htmlAttributes = new { onchange = "ValidateAge()" } })
-            <p class="valid" id="AgeValid">Valid</p>
-            <p class="invalid" id="AgeInvalid">Invalid</p>
-            @Html.LabelFor(x => x.SSN)
-            @Html.EditorFor(x => x.SSN, new { htmlAttributes = new { onchange = "ValidateSSN()" } })
-            <p class="valid" id="SSNValid">Valid</p>
-            <p class="invalid" id="SSNInvalid">Invalid</p>
-            <button type="submit">Register Here</button>
-        }
+                @Html.LabelFor(x => x.FirstName)
+                @Html.EditorFor(x => x.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                <p class="valid" id="FirstNameValid">Valid</p>
+                <p class="invalid" id="FirstNameInvalid">Invalid</p>
+                @Html.LabelFor(x => x.LastName)
+                @Html.EditorFor(x => x.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                <p class="valid" id="LastNameValid">Valid</p>
+                <p class="invalid" id="LastNameInvalid">Invalid</p>
+                @Html.LabelFor(x => x.Email)
+                @Html.EditorFor(x => x.Email, new { htmlAttributes = new { @class = "form-control" } })
+                <p class="valid" id="EmailValid">Valid</p>
+                <p class="invalid" id="EmailInvalid">Invalid</p>
+                @Html.LabelFor(x => x.PhoneNumber)
+                @Html.EditorFor(x => x.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                <p class="valid" id="PhoneNumberValid">Valid</p>
+                <p class="invalid" id="PhoneNumberInvalid">Invalid</p>
+                @Html.LabelFor(x => x.PassWord)
+                @Html.EditorFor(x => x.PassWord, new { htmlAttributes = new { @class = "form-control" } })
+                <p class="valid" id="PassWordValid">Valid</p>
+                <p class="invalid" id="PassWordInvalid">Invalid</p>
+                @Html.LabelFor(x => x.Date)
+                @Html.EditorFor(x => x.Date, new { htmlAttributes = new { @class = "form-control" } })
+                <p class="valid" id="DateValid">Valid</p>
+                <p class="invalid" id="DateInvalid">Invalid</p>
+                @Html.LabelFor(x => x.Age)
+                @Html.EditorFor(x => x.Age, new { htmlAttributes = new { onchange = "ValidateAge()", @class = "form-control" } })
+                <p class="valid" id="AgeValid">Valid</p>
+                <p class="invalid" id="AgeInvalid">Invalid</p>
+                @Html.LabelFor(x => x.SSN)
+                @Html.EditorFor(x => x.SSN, new { htmlAttributes = new { onchange = "ValidateSSN()", @class = "form-control" } })
+                <p class="valid" id="SSNValid">Valid</p>
+                <p class="invalid" id="SSNInvalid">Invalid</p>
+                @Html.LabelFor(x => x.Verify)
+                @Html.RadioButtonFor(x => x.Verify, "Verified")
+                <button type="submit">Register Here</button>
+            }
+        </div>
+        <div class="col-3"></div>
     </div>
 </body>
 </html>
