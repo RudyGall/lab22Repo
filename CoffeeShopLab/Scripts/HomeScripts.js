@@ -76,22 +76,6 @@ $(function () {
         }
     })
 })
-$(function () {
-    $("#Date").change(function () {
-        var val = $("#Date").val();
-        
-        val = isValid(/^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/, val);
-        if (val) {
-            $("#DateValid").show();
-            $("#DateInvalid").hide();
-            
-        }
-        else {
-            $("#DateInvalid").show();
-            $("#DateValid").hide();
-        }
-    })
-})
 function ValidateAge() {
     var agePattern = /^[1-9]$|^[1-9][0-9]$|^(100)$/;
      

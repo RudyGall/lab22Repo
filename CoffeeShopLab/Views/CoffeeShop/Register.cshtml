@@ -25,35 +25,36 @@
             {
 
                 @Html.LabelFor(x => x.FirstName)
-                @Html.EditorFor(x => x.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(x => x.FirstName, new { htmlAttributes = new { @class = "form-control",Value="Rudy" } })
+                @*<input type="text" class="form-control" value="Rudy" id="Rudy" />*@
                 <p class="valid" id="FirstNameValid">Valid</p>
                 <p class="invalid" id="FirstNameInvalid">Invalid</p>
                 @Html.LabelFor(x => x.LastName)
-                @Html.EditorFor(x => x.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(x => x.LastName, new { htmlAttributes = new { @class = "form-control",Value="Gall" } })
                 <p class="valid" id="LastNameValid">Valid</p>
                 <p class="invalid" id="LastNameInvalid">Invalid</p>
                 @Html.LabelFor(x => x.Email)
-                @Html.EditorFor(x => x.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(x => x.Email, new { htmlAttributes = new { @class = "form-control",Value="rudyegall@gmail.com" } })
                 <p class="valid" id="EmailValid">Valid</p>
                 <p class="invalid" id="EmailInvalid">Invalid</p>
                 @Html.LabelFor(x => x.PhoneNumber)
-                @Html.EditorFor(x => x.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(x => x.PhoneNumber, new { htmlAttributes = new { @class = "form-control",Value="2488900136" } })
                 <p class="valid" id="PhoneNumberValid">Valid</p>
                 <p class="invalid" id="PhoneNumberInvalid">Invalid</p>
                 @Html.LabelFor(x => x.PassWord)
-                @Html.EditorFor(x => x.PassWord, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(x => x.PassWord, new { htmlAttributes = new { @class = "form-control",Value="ASdfg" } })
                 <p class="valid" id="PassWordValid">Valid</p>
                 <p class="invalid" id="PassWordInvalid">Invalid</p>
                 @Html.LabelFor(x => x.Date)
-                @Html.EditorFor(x => x.Date, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(x => x.Date, new { htmlAttributes = new { @class = "form-control",Value="06/08/1998" } })
                 <p class="valid" id="DateValid">Valid</p>
                 <p class="invalid" id="DateInvalid">Invalid</p>
                 @Html.LabelFor(x => x.Age)
-                @Html.EditorFor(x => x.Age, new { htmlAttributes = new { onchange = "ValidateAge()", @class = "form-control" } })
+                @Html.EditorFor(x => x.Age, new { htmlAttributes = new { onchange = "ValidateAge()", @class = "form-control", Value="20" } })
                 <p class="valid" id="AgeValid">Valid</p>
                 <p class="invalid" id="AgeInvalid">Invalid</p>
                 @Html.LabelFor(x => x.SSN)
-                @Html.EditorFor(x => x.SSN, new { htmlAttributes = new { onchange = "ValidateSSN()", @class = "form-control" } })
+                @Html.EditorFor(x => x.SSN, new { htmlAttributes = new { onchange = "ValidateSSN()", @class = "form-control",Value="666-66-6666" } })
                 <p class="valid" id="SSNValid">Valid</p>
                 <p class="invalid" id="SSNInvalid">Invalid</p>
                 @Html.LabelFor(x => x.Verify)

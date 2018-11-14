@@ -67,3 +67,7 @@ c:\users\rudye\source\repos\CoffeeShopLab\CoffeeShopLab\obj\Debug\CoffeeShopLab.
 c:\users\rudye\source\repos\CoffeeShopLab\CoffeeShopLab\obj\Debug\CoffeeShopLab.csproj.CopyComplete
 c:\users\rudye\source\repos\CoffeeShopLab\CoffeeShopLab\obj\Debug\CoffeeShopLab.dll
 c:\users\rudye\source\repos\CoffeeShopLab\CoffeeShopLab\obj\Debug\CoffeeShopLab.pdb
+C:\Users\rudye\source\repos\CoffeeShopLab\CoffeeShopLab\bin\EntityFramework.dll
+C:\Users\rudye\source\repos\CoffeeShopLab\CoffeeShopLab\bin\EntityFramework.SqlServer.dll
+C:\Users\rudye\source\repos\CoffeeShopLab\CoffeeShopLab\bin\EntityFramework.xml
+C:\Users\rudye\source\repos\CoffeeShopLab\CoffeeShopLab\bin\EntityFramework.SqlServer.xml
